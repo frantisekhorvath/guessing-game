@@ -12,11 +12,9 @@ function check_input () {
   echo $number
 }
 
-echo "How many files are in current directory?"
-read noFiles
-noFiles=$( check_input $noFiles )
+noFiles=$( ls -1 | wc -l )
 
-echo "Guess how many files are in current directory:"
+echo "How many files are in current directory? Make a guess:"
 read guess
 guess=$( check_input $guess )
 
